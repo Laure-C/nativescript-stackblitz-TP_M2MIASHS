@@ -1,5 +1,3 @@
-import { CityWeatherModel } from './CityWeatherModel.model';
-
 class _WeatherByCityService {
   private allWeather: CityWeatherModel[] = [];
 
@@ -54,3 +52,15 @@ class _WeatherByCityService {
 }
 
 export const WeatherByCityService = new _WeatherByCityService();
+
+export interface CityWeatherModel {
+  cityName: String;
+  country: String;
+  temperature: number; //°C
+  summary: String;
+  icon: String;
+  date: Date;
+  precipitation: number; //pourcentages
+  vent: number; //km/h
+  humidité: number; //pourcentages
+}
