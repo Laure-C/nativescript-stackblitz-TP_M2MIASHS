@@ -12,11 +12,9 @@ type ScreenTwoProps = {
 
 export function ScreenTwo({ navigation, route }: ScreenTwoProps) {
   return (
-    <flexboxLayout style={styles.container}>
-      <label style={styles.text}>Météo {route.params.ville}</label>
-      <button style={styles.button} onTap={() => navigation.goBack()}>
-        Go back
-      </button>
+    <flexboxLayout>
+      <label>Météo {route.params.ville}</label>
+      <button onTap={() => navigation.goBack()}>Go back</button>
     </flexboxLayout>
   );
 }
@@ -26,15 +24,5 @@ const styles = StyleSheet.create({
     height: '100%',
     flexDirection: 'column',
     justifyContent: 'center',
-    backgroundColor: 'yellow',
-  },
-  text: {
-    textAlignment: 'center',
-    fontSize: 24,
-    color: 'black',
-  },
-  button: {
-    fontSize: 24,
-    color: '#2e6ddf',
   },
 });
